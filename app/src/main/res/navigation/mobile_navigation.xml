@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_students">
+
+    <fragment
+        android:id="@+id/navigation_students"
+        android:name="com.noir.studentapp.ui.students.StudentsFragment"
+        android:label="@string/title_students"
+        tools:layout="@layout/fragment_students" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.noir.studentapp.ui.add.AddStudentFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_addstudent" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.noir.studentapp.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
