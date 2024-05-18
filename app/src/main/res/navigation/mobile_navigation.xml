@@ -9,7 +9,11 @@
         android:id="@+id/navigation_students"
         android:name="com.noir.studentapp.ui.students.StudentsFragment"
         android:label="@string/title_students"
-        tools:layout="@layout/fragment_students" />
+        tools:layout="@layout/fragment_students" >
+        <action
+            android:id="@+id/action_navigation_students_to_studentDetailFragment"
+            app:destination="@id/studentDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_add"
@@ -22,4 +26,22 @@
         android:name="com.noir.studentapp.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/studentDetailFragment"
+        android:name="com.noir.studentapp.ui.students.detail.StudentDetailFragment"
+        android:label="fragment_student_detail"
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="image" />
+        <argument
+            android:name="nama"
+            app:argType="string"
+            android:defaultValue="nama" />
+        <argument
+            android:name="nim"
+            app:argType="string"
+            android:defaultValue="nim" />
+    </fragment>
 </navigation>
